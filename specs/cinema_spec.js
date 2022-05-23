@@ -44,7 +44,7 @@ describe('Cinema', function () {
 
   it('should be able to filter films by genre', function() {
     assert.deepStrictEqual(
-      cinema.filterByGenre('drama'), [moonlight, trainspotting]
+      cinema.filmsByProperty('genre', 'drama'), [moonlight, trainspotting]
     );
   });
 
@@ -75,5 +75,12 @@ describe('Cinema', function () {
       assert.strictEqual(cinema.totalRuntime(), 622);
     }
   );
+
+  it('should be able to filter films by year', function() {
+    assert.deepStrictEqual(
+      cinema.filmsByProperty('year', 2017),
+      [bladeRunner, dunkirk, trainspotting]
+    );
+  });
 
 });
