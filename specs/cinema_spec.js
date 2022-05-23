@@ -55,8 +55,25 @@ describe('Cinema', function () {
     }
   );
 
-  it('should be able to check whether there are no films from a particular year');
-  it('should be able to check whether all films are over a particular length');
-  it('should be able to calculate total running time of all films');
+  it(
+    'should be able to check whether there are no films from a particular year',
+    function() {
+      assert.strictEqual(cinema.checkForYear(2000), false);
+    }
+  );
+
+  it(
+    'should be able to check whether all films are over a particular length',
+    function() {
+      assert.strictEqual(cinema.areAllFilmsLongerThan(90), true);
+    }
+  );
+
+  it(
+    'should be able to calculate total running time of all films',
+    function() {
+      assert.strictEqual(cinema.totalRuntime(), 622);
+    }
+  );
 
 });
