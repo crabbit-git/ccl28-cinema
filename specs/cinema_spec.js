@@ -51,14 +51,14 @@ describe('Cinema', function () {
   it(
     'should be able to check whether there are some films from a particular year',
     function() {
-      assert.strictEqual(cinema.checkForYear(2018), true);
+      assert.strictEqual(cinema.hasFilmsFromYear(2018), true);
     }
   );
 
   it(
     'should be able to check whether there are no films from a particular year',
     function() {
-      assert.strictEqual(cinema.checkForYear(2000), false);
+      assert.strictEqual(cinema.hasFilmsFromYear(2000), false);
     }
   );
 

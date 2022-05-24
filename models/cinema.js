@@ -6,11 +6,11 @@ Cinema.prototype.getTitles = function() {
   return this.films.map(film => film.title);
 }
 
-Cinema.prototype.findByTitle = function(filmTitle) {
-  return this.films.find(film => film.title === filmTitle);
+Cinema.prototype.findByTitle = function(title) {
+  return this.films.find(film => film.title === title);
 }
 
-Cinema.prototype.checkForYear = function(year) {
+Cinema.prototype.hasFilmsFromYear = function(year) {
   return this.films.some(film => film.year === year);
 }
 
